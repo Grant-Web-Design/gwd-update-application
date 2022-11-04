@@ -5,9 +5,12 @@ inputs:
   gitFolderLocation:
     description: "The location git project of the customer website."
     required: true
+  privateKey:
+    description: "The organization GWD_HOSTING_SERVER_KEY secret"
+    required: true
+  serverAddress:
+    description: "The organization GWD_HOSTING_SERVER_ADDRESS secret"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
-  env:
-    GWD_HOSTING_SERVER_KEY: ${ secrets.GWD_HOSTING_SERVER_KEY }
-    GWD_HOSTING_SERVER_ADDRESS: ${ secrets.GWD_HOSTING_SERVER_ADDRESS }

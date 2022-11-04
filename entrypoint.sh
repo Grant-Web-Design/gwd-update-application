@@ -7,7 +7,7 @@ NORMAL='\033[0m'
 
 mkdir -p ~/.ssh/
 install -m 600 /dev/null ~/.ssh/id_rsa
-echo "${GWD_HOSTING_SERVER_KEY}" > ~/.ssh/id_rsa
+echo "${INPUT_PRIVATEKEY}" > ~/.ssh/id_rsa
 
 install -m 700 /dev/null ~/script.sh
 echo '# Environment variables:' >> ~/script.sh
@@ -20,15 +20,15 @@ echo '# Commands:' >> ~/script.sh
 echo "cd ${INPUT_GITFOLDERLOCATION} && bash build-start-application.sh" >> ~/script.sh
 
 echo ""
-echo -e "${COLOR}Run on:${NORMAL} ${GWD_HOSTING_SERVER_ADDRESS}"
+echo -e "${COLOR}Run on:${NORMAL} ${INPUT_SERVERADDRESS}"
 echo -e "${COLOR}Commands:${NORMAL}"
 
 cat ~/script.sh
 
 echo ""
 
-echo -e "${COLOR}Connecting to ${host}...${NORMAL}"
-sh -c "ssh -q -t -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '${host}' < ~/script.sh"
+echo -e "${COLOR}Connecting to ${INPUT_SERVERADDRESS}...${NORMAL}"
+sh -c "ssh -q -t -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '${INPUT_SERVERADDRESS}' < ~/script.sh"
 echo ""
 
 echo ""
