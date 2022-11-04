@@ -8,3 +8,6 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    GWD_HOSTING_SERVER_KEY: ${ secrets.GWD_HOSTING_SERVER_KEY }
+    GWD_HOSTING_SERVER_ADDRESS: ${ secrets.GWD_HOSTING_SERVER_ADDRESS }
