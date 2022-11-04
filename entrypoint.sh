@@ -22,11 +22,9 @@ echo "cd ${INPUT_GITFOLDERLOCATION} && bash build-start-application.sh" >> ~/scr
 echo ""
 echo -e "${COLOR}Run on:${NORMAL} ${GWD_HOSTING_SERVER_ADDRESS}"
 echo -e "${COLOR}Commands:${NORMAL}"
-if [[ "${INPUT_DEBUG}" = "true" ]] || [[ "${INPUT_DEBUG}" = "1" ]]; then
-    cat ~/script.sh
-else
-    cat ~/script.sh | sed '1,/^# Commands:$/d'
-fi
+
+cat ~/script.sh
+
 echo ""
 
 echo -e "${COLOR}Connecting to ${host}...${NORMAL}"
