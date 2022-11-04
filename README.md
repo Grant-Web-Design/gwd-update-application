@@ -1,6 +1,6 @@
-# Update customer preview website action
+# Update Grant Web Design applicaton
 
-This action can be used to take care of most of the legwork involved in updating a customer preview website. It uses SSH to connect to the Grant Web Design hosting server, and runs the `build-start-application.sh` script in the git folder given in the `gitFolderLocation` input.
+This action can be used to take care of most of the legwork involved in updating an application on the Grant Web Desing hosting server. It uses SSH to connect to the hosting server, and runs the `build-start-application.sh` script in the git folder given in the `gitFolderLocation` input.
 
 To SSH into the server, this action requires the follwing inputs:
 

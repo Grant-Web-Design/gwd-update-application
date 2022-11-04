@@ -1,9 +1,9 @@
-name: "Update Preview Website"
-description: "This action connects to the Grant Web Design hosting server to update a customer preview website."
+name: "Update Grant Web Design Application"
+description: "This action connects to the Grant Web Design hosting server and updates the application by calling the build install script."
 author: "Grant Web Design"
 inputs:
   gitFolderLocation:
-    description: "The location git project of the customer website."
+    description: "The location of the git project on the server."
     required: true
   privateKey:
     description: "The organization GWD_HOSTING_SERVER_KEY secret"
