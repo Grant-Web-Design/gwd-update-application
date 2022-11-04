@@ -1,12 +1,10 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: "Update Preview Website"
+description: "This action connects to the Grant Web Design hosting server to update a customer preview website."
+author: "Grant Web Design"
+inputs:
+  gitFolderLocation:
+    description: "The location git project of the customer website."
+    required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.myInput }}
+  using: "docker"
+  image: "Dockerfile"

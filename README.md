@@ -1,5 +1,5 @@
-# Container Action Template
+# Update customer preview website action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+This action can be used to take care of most of the legwork involved in updating a customer preview website. It uses SSH to connect to the Grant Web Design hosting server, and runs the `build-start-application.sh` script in the git folder given in the `gitFolderLocation` input.
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+The action uses the Grant Web Design organization secrets `GWD_HOSTING_SERVER_ADDRESS` and `GWD_HOSTING_SERVER_KEY` to connect to the server, so please make sure the repository you use this action in has sufficient access rights to these secrets.
