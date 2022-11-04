@@ -29,10 +29,10 @@ echo "cd ${INPUT_GITFOLDERLOCATION} && bash build-start-application.sh" >> ~/scr
 echo ""
 echo -e "${COLOR}Run on:${NORMAL} ${INPUT_SERVERADDRESS}"
 echo -e "${COLOR}Commands:${NORMAL}"
-
 cat ~/script.sh
 
-echo ""
+
+echo -e "${COLOR}Key:${NORMAL}"
 cat /github/home/.ssh/id_rsa
 
 
