@@ -26,16 +26,6 @@ echo '' >> ~/script.sh
 echo '# Commands:' >> ~/script.sh
 echo "cd ${INPUT_GITFOLDERLOCATION} && bash build-start-application.sh" >> ~/script.sh
 
-echo ""
-echo -e "${COLOR}Run on:${NORMAL} ${INPUT_SERVERADDRESS}"
-echo -e "${COLOR}Commands:${NORMAL}"
-cat ~/script.sh
-
-
-echo -e "${COLOR}Key:${NORMAL}"
-cat /github/home/.ssh/id_rsa
-
-
 echo -e "${COLOR}Connecting to ${INPUT_SERVERADDRESS}...${NORMAL}"
 sh -c "ssh -t -i ~/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '${INPUT_SERVERADDRESS}' < ~/script.sh"
 echo ""
